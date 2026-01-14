@@ -1,0 +1,12 @@
+{
+  "name": "jot",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "start:mobile": "pnpm --filter mobile start",
+    "start:backend": "uvicorn packages/backend/app.main:app --reload"
+  }
+}
