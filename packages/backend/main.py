@@ -1,7 +1,7 @@
-from fastapi import FastAPI
+"""
+Entrypoint historique (compat).
 
-app = FastAPI()
+Le backend vit maintenant dans `packages/backend/app/main.py`.
+"""
 
-@app.get("/")
-async def root():
-    return {"message": "Hello World"}
+from app.main import app  # noqa: F401

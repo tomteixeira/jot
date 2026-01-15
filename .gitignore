@@ -1,12 +1,84 @@
-# Node
-node_modules/
-pnpm-lock.yaml
+# -------------------------------------------------------------------
+# Global / OS / editor
+# -------------------------------------------------------------------
+.DS_Store
+.AppleDouble
+.LSOverride
 
-# Expo
+.idea/
+.vscode/
+
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# -------------------------------------------------------------------
+# Environment files (keep examples)
+# -------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+!**/.env.example
+
+# -------------------------------------------------------------------
+# Node / monorepo tooling (applies to root, apps/* and packages/*)
+# -------------------------------------------------------------------
+node_modules/
+.pnp/
+.pnp.cjs
+.pnpm-store/
+
+dist/
+build/
+out/
+coverage/
+.nyc_output/
+
+*.tsbuildinfo
+.eslintcache
+.cache/
+
+# Turborepo / Next.js (safe even if not used yet)
+.turbo/
+.next/
+
+# -------------------------------------------------------------------
+# Expo / React Native (mostly under apps/*)
+# -------------------------------------------------------------------
 .expo/
 .expo-shared/
 
-# Python
-**/__pycache__/
-**/.venv/
-*.pyc
+# Metro / React Native caches
+metro-cache/
+.metro-health-check*
+
+# Native build outputs (in case ios/ or android/ get added)
+ios/Pods/
+ios/build/
+android/.gradle/
+android/app/build/
+
+# -------------------------------------------------------------------
+# Python (mostly under packages/*)
+# -------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+
+.venv/
+venv/
+ENV/
+
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+
+# -------------------------------------------------------------------
+# Local secrets / credentials
+# -------------------------------------------------------------------
+*.pem
+*.key
+.secrets/
