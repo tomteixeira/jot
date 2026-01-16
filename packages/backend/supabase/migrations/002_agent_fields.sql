@@ -9,3 +9,4 @@ create index if not exists captures_user_title_idx
   on public.captures (user_id, title);
 
 
+

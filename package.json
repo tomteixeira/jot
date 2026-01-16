@@ -7,6 +7,6 @@
   ],
   "scripts": {
     "start:mobile": "pnpm --filter mobile start",
-    "start:backend": "uvicorn app.main:app --reload --app-dir packages/backend"
+    "start:backend": "bash packages/backend/scripts/dev.sh"
   }
 }

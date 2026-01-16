@@ -75,12 +75,13 @@ as $$
     )
   order by
     case
-      when search_query is null or length(trim(search_query)) = 0 then c.created_at
+      when search_query is null or length(trim(search_query)) = 0 then 0::real
       else ts_rank(c.content_tsv, websearch_to_tsquery('simple', search_query))
     end desc,
     c.created_at desc
   limit greatest(1, least(max_rows, 200))
   offset greatest(offset_rows, 0);
 $$;
+
 
 

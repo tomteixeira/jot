@@ -33,6 +33,8 @@ Depuis la racine:
 pnpm start:backend
 ```
 
-Le backend charge l’environnement via `python-dotenv` si tu l’utilises (voir `app/main.py`).
+Le script utilise `packages/backend/.venv/bin/python` (pas besoin d’activer le venv dans le terminal).
+Le backend charge l’environnement via `python-dotenv` (voir `app/main.py`).
+
 
 
